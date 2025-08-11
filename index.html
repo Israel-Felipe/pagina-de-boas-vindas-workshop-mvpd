@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop MVPD - Inscricao Confirmada</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @font-face {
+        font-family: 'Morally';
+        src: url('fonts/Morally.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'ProductSans';
+        src: url('fonts/ProductSans.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .wave-pattern {
+        background-color: #dd2c4a;
+        background-image: url('imgs/patternwave.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .decoration-clone {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        display: inline;
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              burgundy: '#8B1538',
+              'light-purple': '#E8D5E8',
+              'dark-purple': '#6B46C1',
+              'primary-pink': '#E91E63',
+              'dark-pink': '#AD1457',
+            },
+            fontFamily: {
+              Morally: ['Morally', 'system-ui', '-apple-system', 'sans-serif'],
+              sans: ['ProductSans', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+
+  <body class="h-screen overflow-hidden bg-[#f0f1f0]">
+    <!-- Desktop Layout -->
+    <div class="hidden lg:flex h-screen">
+      <!-- Left Section - Content -->
+      <div class="w-[75vw] flex items-center z-20">
+        <div class="pl-[13%] max-w-[80%]">
+          <!-- Main Heading -->
+          <h1
+            class="text-7xl text-primary-pink mb-4 !leading-tight font-Morally"
+          >
+            Inscrição confirmada!
+          </h1>
+
+          <!-- Description -->
+          <p class="text-burgundy text-4xl mb-8 !leading-snug italic pr-[20%]">
+            Em breve nossa equipe entrará em contato com você, enquanto isso...
+          </p>
+
+          <!-- WhatsApp Group Info -->
+          <div class="mb-8 font-semibold pr-[10%]">
+            <p class="text-burgundy text-5xl !tracking-wider">
+              Entre no
+              <span class="text-green-500 font-semibold">Grupo no Whats</span>
+            </p>
+            <p class="text-burgundy text-5xl !tracking-wider">
+              para receber o acesso ao link das aulas + materiais extras!
+            </p>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="https://chat.whatsapp.com/LAdJRNYGG9D7VCeEDHuaGm">
+            <button
+              class="bg-[#DD2C4A] hover:bg-burgundy text-white py-3 px-6 rounded-full text-7xl transition-colors duration-300 transform hover:scale-105 shadow-lg font-Morally tracking-wider"
+            >
+              Entre no grupo
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Section - Image with Wave Background -->
+      <div class="flex-1 wave-pattern flex items-end justify-center relative">
+        <!-- Logo positioned at top left -->
+        <div class="absolute top-16 right-20">
+          <img src="imgs/logo.png" alt="MVPD Logo" class="h-48 w-auto" />
+        </div>
+
+        <!-- Event Date Badge positioned at top right -->
+        <div class="fixed bottom-[8vw] right-[20vh] z-20">
+          <p
+            class="text-burgundy font-bold text-5xl leading-tight font-Morally"
+          >
+            100% ao vivo
+          </p>
+          <p class="text-white italic text-3xl leading-tight bg-[#dd2c4a] px-1">
+            01, 03 e 04 de Setembro!
+          </p>
+        </div>
+
+        <!-- Woman Image - Large and positioned at bottom -->
+        <div class="fixed z-0 -bottom-[10vh] right-[30vh] mb-0">
+          <img
+            src="imgs/paola.png"
+            alt="Paola"
+            class="h-96 lg:h-[100vh] w-auto object-contain object-bottom"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Layout ------------------------------------------------------------------>
+    <div
+      class="md:hidden h-[18vh] flex relative wave-pattern items-center justify-between px-8"
+    >
+      <!-- Logo positioned at top left -->
+      <div class="z-10">
+        <img src="imgs/logo.png" alt="MVPD Logo" class="h-16 w-auto" />
+      </div>
+
+      <!-- Event Date Badge positioned at top right -->
+      <div class="z-10 text-right">
+        <p class="text-burgundy font-bold text-2xl leading-tight font-Morally">
+          100% ao vivo
+        </p>
+        <p class="text-white italic text-log leading-tight bg-[#8B1538] px-1">
+          01, 03 e 04 de Setembro!
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="md:hidden px-6 pt-10 flex flex-col justify-start relative z-10">
+      <!-- Main Heading -->
+      <h1
+        class="text-4xl text-primary-pink mb-4 !leading-tight font-Morally font-bold"
+      >
+        Inscrição confirmada!
+      </h1>
+
+      <!-- Description -->
+      <p class="text-burgundy text-2xl mb-8 !leading-snug italic pr-[20%]">
+        <span
+          class="bg-[#f0f1f0] px-2 py-1 box-decoration-clone rounded-lg bg-opacity-75"
+        >
+          Em breve nossa equipe entrará em contato com você, enquanto isso...
+        </span>
+      </p>
+
+      <!-- WhatsApp Group Info -->
+      <div class="mb-12 font-semibold pr-[35%]">
+        <p class="text-burgundy text-2xl">
+          <span
+            class="bg-[#f0f1f0] px-2 py-1 box-decoration-clone rounded-lg bg-opacity-75"
+            >Entre no
+
+            <span class="text-green-500 font-semibold">Grupo no Whats</span>
+            para receber o acesso ao link das aulas + materiais extras!</span
+          >
+        </p>
+      </div>
+    </div>
+    <!-- CTA Button -->
+    <a href="https://chat.whatsapp.com/LAdJRNYGG9D7VCeEDHuaGm">
+      <button
+        class="ml-6 bg-[#DD2C4A] hover:bg-burgundy text-white py-3 px-6 rounded-xl text-3xl transition-colors duration-300 transform hover:scale-105 shadow-lg font-Morally tracking-wider relative z-20"
+      >
+        Entre no grupo
+      </button>
+    </a>
+
+    <div
+      class="md:hidden h-[12vh] fixed bottom-0 w-full flex wave-pattern items-center justify-between px-8"
+    ></div>
+
+    <!-- Woman Image - Large and positioned at bottom -->
+    <div
+      class="lg:hidden fixed -bottom-[5vh] -right-[40vw] flex justify-center"
+    >
+      <img
+        src="imgs/paola.png"
+        alt="Paola"
+        class="h-[75vh] w-auto object-contain object-bottom"
+      />
+    </div>
+  </body>
+</html>
